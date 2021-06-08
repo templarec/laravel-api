@@ -19380,6 +19380,22 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+var app = new Vue({
+  el: '#root',
+  data: {
+    cats: {}
+  },
+  created: function created() {
+    var _this = this;
+
+    axios.get('http://localhost:8000/api/cats').then(function (risposta) {
+      _this.cats = risposta.data.data;
+    });
+  },
+  computed: {},
+  methods: {}
+});
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":

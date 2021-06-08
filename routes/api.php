@@ -14,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('cats', 'CatController@index');
+Route::get('cats', 'CatController@index')->middleware('CheckToken');

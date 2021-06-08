@@ -22,7 +22,8 @@
 
 <div id="root">
     <h1>Current cat breeds around the world</h1>
-    <div class="container">
+    <p>@{{ error }}</p>
+    <div v-if="cats.length > 0" class="container">
 
         <div v-for="cat in cats" class="card">
             <div><span class="breed-title">Breed:</span><span class="breed-cont">@{{cat.breed}}</span></div>

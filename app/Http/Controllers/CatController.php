@@ -14,7 +14,8 @@ class CatController extends Controller
      */
     public function index()
     {
-        //
+        $cats = Cat::all();
+        return response()->json(['data' => $cats, 'success' => true]);
     }
 
     /**
